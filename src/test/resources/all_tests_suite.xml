@@ -37,4 +37,9 @@
     </test>
 
 
+    <test name="Change Product Quantity Tests">
+        <classes>
+            <class name="tests.PositiveChangeProductQuantity"/>
+        </classes>
+    </test>
 </suite>
