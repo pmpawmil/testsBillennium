@@ -15,7 +15,7 @@ public class AssertWebElement extends AbstractAssert<AssertWebElement, WebElemen
         super(webElement, AssertWebElement.class);
     }
 
-    public static AssertWebElement assertThat(WebElement webElement){
+    public static AssertWebElement assertThat(WebElement webElement) {
         return new AssertWebElement(webElement);
     }
 
@@ -30,18 +30,33 @@ public class AssertWebElement extends AbstractAssert<AssertWebElement, WebElemen
         return this;
     }
 
-    //Metoda do sprawdzenia czy element posiada zadany tekst
-    public AssertWebElement hasText(String expectedTextValue){
+    public AssertWebElement hasText(String expectedTextValue) {
         logger.info("Checking if WebElement has text: " + expectedTextValue);
         isNotNull();
 
         String actualElementText = actual.getText();
+
         if(!actualElementText.equals(expectedTextValue)){
             failWithMessage("Element text was <%s> expecting to be <%s>!", actualElementText, expectedTextValue);
         }
 
         logger.info("WebElement had expected text!");
         return this;
+    }
+
+    public AssertWebElement hasValue(String expectedValue) {
+        logger.info("Checking if WebElement has value: " + expectedValue);
+        isNotNull();
+
+        String actualValue = actual.getAttribute("value");
+
+        if(!actualValue.equals(expectedValue)) {
+            failWithMessage("Element text was <%s> expecting to be <%s>!", actualValue, expectedValue);
+        }
+
+        logger.info("WebElement had expected value!");
+        return this;
+
     }
 
 }

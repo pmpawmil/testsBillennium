@@ -8,7 +8,7 @@ import org.testng.annotations.BeforeMethod;
 
 public class TestBase {
 
-    @Step("Setting up browser") // and navigating to Home Page")
+    @Step("Setting up browser")
     @BeforeMethod
     public void beforeTest() {
         DriverManager.getWebDriver();

@@ -14,9 +14,6 @@ public class ShoppingCartTests extends TestBase {
             " and check if message \"Your shopping cart is empty.\" is displayed")
     public void asUserEntersEmptyShoppingCart() {
 
-        // TODO 1TC: enter ShoppingCartPage from TopMenuPage and assert the page is displayed
-        // TODO 2TC: enter ShoppingCartPage directly and assert the message is displayed
-
         DriverUtils.navigateToPage(APPLICATION_URL);
 
         TopMenuPage topMenuPage = new TopMenuPage();
