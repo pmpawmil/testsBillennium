@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="All Pet Store Tests">
+
+    <listeners>
+        <listener class-name="utils.testng.listeners.TestListener"/>
+    </listeners>
+
+    <test name="Negative Login Tests">
+        <classes>
+            <class name="tests.FailedLoginTests"/>
+        </classes>
+    </test>
+
+    <test name="Negative Email Tests">
+        <classes>
+            <class name="tests.FailedEmailTests"/>
+        </classes>
+    </test>
+
+    <test name="Dropdown Tests">
+        <classes>
+            <class name="tests.DropdownTests"/>
+        </classes>
+    </test>
+
+    <test name="Positive Message Sent Tests">
+        <classes>
+            <class name="tests.PositiveMessageSentTests"/>
+        </classes>
+    </test>
+
+    <test name="Shopping Cart Tests">
+        <classes>
+            <class name="tests.ShoppingCartTests"/>
+        </classes>
+    </test>
+
+
+</suite>
